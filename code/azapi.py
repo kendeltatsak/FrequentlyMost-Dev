@@ -319,7 +319,7 @@ def sendToFile(orderedArray, artistName, numSongs):
 
 def postGist(fileName):
     url = "https://api.github.com/gists"
-    with open('/etc/tokens.txt', 'r') as file:
+    with open('/etc/tokens_dev.txt', 'r') as file:
         tokens = file.read().splitlines()
 
     headers = {'Authorization': 'token ' + tokens[0]}
@@ -338,7 +338,7 @@ def postGist(fileName):
 
 
 def sendTweet(orderedArray, gistURL, artist, numWords):
-    with open('/etc/tokens.txt', 'r') as file:
+    with open('/etc/tokens_dev.txt', 'r') as file:
         tokens = file.read().splitlines()
 
     auth = tweepy.OAuthHandler(tokens[1], tokens[2])
