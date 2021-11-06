@@ -342,15 +342,4 @@ if __name__ == '__main__':
         print("followed: " + artist.get_handle())
         AzlyricsAPI.addToDatabase(tweet, artist)
         print("added tweet to database")
-    
-            
 
-    
-#     artist = AzlyricsAPI.getRandomArtist()
-#     api = AzlyricsAPI.twitterLogin()
-#     statuses = api.home_timeline()
-#     print(type(statuses[0].created_at))
-
-    
-    
-    
