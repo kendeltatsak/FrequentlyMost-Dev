@@ -66,7 +66,7 @@ if __name__ == '__main__':
             timeElapsed = dt.datetime.utcnow().replace(tzinfo=pytz.utc) - status.created_at
             
             
-            if timeElapsed.seconds < 300 and tweet.num_replies < 4:
+            if timeElapsed.seconds < 300000 and tweet.num_replies < 4:
                 
                 replyTweet = f"https://twitter.com/{tweet.user}/status/{tweet.str_id}"
                 api.update_status(status=replyTweet, in_reply_to_status_id = status.id_str,
