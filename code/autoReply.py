@@ -56,7 +56,7 @@ if __name__ == '__main__':
     statuses = api.home_timeline()
     
     for status in statuses:
-        if str(status.user.screen_name) != 'dev_kendel':
+        if str(status.user.screen_name) != 'dev_kendel' and not status.retweeted:
             
             
             sqlCode = f"SELECT * FROM tweets WHERE LOWER(at_user) LIKE LOWER('%{status.user.screen_name}%')"
